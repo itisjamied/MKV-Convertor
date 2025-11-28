@@ -1,0 +1,20 @@
+{
+  "name": "mkv-convertor",
+  "version": "1.0.0",
+  "description": "A cross-platform desktop app for converting MKV container files into browser-friendly MP4 files. Uses Electron for local file access/UI and FFmpeg (via an npm wrapper) to remux or transcode media streams.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^39.2.4"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "fluent-ffmpeg": "^2.1.3"
+  }
+}
