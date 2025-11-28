@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
@@ -11,10 +10,25 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
-    <title>Hello from Electron renderer!</title>
+    <title>MKV → MP4 Converter (WIP)</title>
   </head>
   <body>
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
+    <h1>MKV → MP4 Converter</h1>
+    <p>Step 1: pick an MKV file from your computer.</p>
+
+    <label for="file-input">Choose MKV file:</label>
+    <input
+      type="file"
+      id="file-input"
+      accept=".mkv,video/x-matroska,video/*"
+    />
+
+    <p id="file-info">No file selected yet.</p>
+
+    <button id="convert-btn" disabled>Convert to MP4</button>
+
+    <p id="status"></p>
+
+    <script src="renderer.js"></script>
   </body>
 </html>
